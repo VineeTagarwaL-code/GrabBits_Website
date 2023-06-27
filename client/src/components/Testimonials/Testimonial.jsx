@@ -38,7 +38,7 @@ const Testimonial = () => {
 					transition={{ delay: 0.1, duration: 0.4 }}
 					className={classes.tsectionh1}
 				>
-					Go Through Reviews Of Previews Students To
+					Go Through Reviews Of Previous Students To
 				</motion.h1>
 				<motion.h2
 					variants={fadeIn}
