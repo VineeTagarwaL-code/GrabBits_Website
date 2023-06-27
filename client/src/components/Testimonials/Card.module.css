@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.testimon {
+  padding: 30px;
+  padding-left: 500px;
+  padding-right: 500px;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1250px) {
+  .testimon {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.testimonSubsection {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-left:3rem ;
+  padding-right:3rem ;
+  padding-bottom:4rem ;
+  border-radius: 20px;
+}
+
+.testisub {
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.testimain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+}
+
+.testih1 {
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.75rem;
+  font-weight: 600;
+  height: 100%;
+}
+
+.testimain {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.testimsub2 {
+  margin-top: 1.5rem;
+  bottom: 10px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.testiImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  /* box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%) translateY(-64px); */
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.te {
+  background-color: #f8f9ff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Card.module.css */
+
+/* ... other styles ... */
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/*
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #f0f0f0;
+} */
