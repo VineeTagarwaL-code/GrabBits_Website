@@ -47,6 +47,12 @@ const Navbar = () => {
 									Opportunities
 								</li>
 							</NavLink>
+							<NavLink to="/resources" onClick={handleLinkClick}>
+								<li className={classes.nav__item}>
+									<i className="uil uil-bag" id={classes.nav__icon}></i>
+									Resources
+								</li>
+							</NavLink>
 							<NavLink to="/podcasts" onClick={handleLinkClick}>
 								<li className={classes.nav__item}>
 									<i className="uil uil-megaphone" id={classes.nav__icon}></i>

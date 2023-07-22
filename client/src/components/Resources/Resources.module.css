@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-darkorchid: #7541c8;
+    --color-white: white;
+    --color-contentT: #BC97F6;
+    --color-contentP: #484848;
+    --color-contentA: #3C3C3C;
+}
+
+.wrapper{
+    /* height: 200vh; */
+    width: 100vw;
+}
+.triangle{
+    position: relative;
+    width: 100vw;
+    height: 620px;
+    background-color: var(--color-darkorchid);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+}
+
+.header{
+    width: 100vw;
+    /* height: 200px; */
+    position: relative;
+    /* height: 100vh; */
+}
+.h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    right: 25px;
+}
+._h1{
+    font-size: 45px;
+    color: var(--color-white);
+}
+.selector{
+    height: 254px;
+    width: 100vw;
+    position: relative;
+    top: -50px;
+    background-image: url("../../../public/graduation.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.content_start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content_type{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    color: var(--color-white);
+}
+
+.sort_section{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+.sorting_selector{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+
+/* Content Section */
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.content_display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+    justify-content: center;
+    margin-top: -175px;
+    width: 100vw;
+}
+.content_gird {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .content_display_data {
+    background-color: rgb(250, 247, 247);
+    padding: 10px;
+    height: 380px;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    text-align: center;
+    margin: 30px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .content_display_data  img{
+    height: 150px;
+    width: 250px;
+  }
+  .content_display_data  h1{
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: var(--color-contentT);
+    color: var(--color-white);
+    border-radius: 5px;
+    width: 100px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    height: 25px;
+    padding-top: 4px;
+  }
+
+  .content_display_data p{
+    margin-left: 15px;
+    text-align: -webkit-left;
+    overflow: hidden;
+    color: var(--color-contentP);
+  }
+    .content_display_data a{
+        margin-right: 200px;
+        color: var(--color-contentA);
+        position: relative;
+    }
+
+    .content_display_data a::after{
+        content: "";
+        background-image: url("../../..//public/Arrow_.png");
+        display: inline-block;
+        position: absolute;
+        background-size: cover;
+        width: 63px;
+        height: 8px;
+        top: 19px;
+        left: 0px;
+    }
+
+/* Mobile */
+@media(max-width: 700px){
+    .selector{
+        top: -20px;
+        z-index: -1;
+    }
+    ._h1{
+        width: 200px;
+        margin: 0px auto;
+        margin-bottom: 0;
+        font-weight: 500;
+        line-height: 0;
+    }
+    .triangle{
+        height: 500px;
+    }
+}
