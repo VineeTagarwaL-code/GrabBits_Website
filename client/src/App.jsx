@@ -1,6 +1,6 @@
 import { React, useEffect, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import {Contact,Footer,	Navbar,	Team, Opportunities, Hidden,
+import {Contact,Footer,	Navbar,	Team, Opportunities, Resources, Hidden,
 	Podcast, GoToTop, Username, Register, Password, Profile, 
 	Recovery, Reset, PageNotFound, Grabby
 } from './components';
@@ -39,7 +39,7 @@ const App = () => {
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/podcasts" element={<Podcast />} />
 				<Route path="/hidden" element={<Hidden />} />
-				<Route path="/resources" element={<Hidden />} />
+				<Route path="/resources" element={<Resources />} />
 				<Route path="/grabby" element={<Grabby />} />
 				{/* <Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} /> */}

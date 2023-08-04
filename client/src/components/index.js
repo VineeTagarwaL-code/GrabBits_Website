@@ -8,6 +8,7 @@ const Footer=lazy(()=>import('./Footer/Footer'))
 const Landing=lazy(()=>import('./Landing/Landing'))
 const Team=lazy(()=>import('./Team/Team'))
 const Opportunities=lazy(()=>import('./Opportunities/Opportunities'))
+const Resources=lazy(()=>import('./Resources/Resources'))
 const Podcast=lazy(()=>import('./Podcast/Podcast'))
 const Highlights=lazy(()=>import('./Highlights/Highlights'))
 const Hidden=lazy(()=>import('./Hidden/Hidden'))
@@ -33,6 +34,7 @@ export{
 	Footer,
 	Team,
 	Opportunities,
+    Resources,
 	Hidden,
 	Podcast,
     Highlights,
