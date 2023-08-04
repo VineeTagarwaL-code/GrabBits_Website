@@ -18,6 +18,7 @@ const Homepage = () => {
 			<Highlights />
 			<Extra />
 			<About />
+			<Testimonial /> 
 			<Faq />
 
 			{/* <Swiper /> */}
