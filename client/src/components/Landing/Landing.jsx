@@ -23,7 +23,7 @@ const Landing = () => {
 					</h1>
 					<h2 className={classes.subheading}>
 						Get the latest updates about internships, hackathons, job openings
-						and much more..
+						and much more ...
 					</h2>
 					<a href="/team">
 						<Button label="Explore" padding="16px 32px" fontSize="24px" />
