@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .landing {
 	display: flex;
 	justify-content: space-between;
@@ -6,19 +8,21 @@
 	height: 100vh;
 	padding: 0 50px;
 	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
 }
 .column1 {
+	font-family: ;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
-	margin-top: 100px;
-	gap: 40px;
+	margin-top: 50px;
+	gap: 20px;
 	margin-left: 100px;
 }
 .heading {
 	font-size: 5.5vw;
-	font-weight: 600;
+	font-weight: 500;
 	width: 40vw;
 }
 .heading_highlight {

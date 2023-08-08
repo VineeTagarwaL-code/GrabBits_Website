@@ -30,6 +30,7 @@ const Button = ({
 						fontSize: fontSize,
 						backgroundColor: bgColor,
 						color: color,
+						fontWeight: 400
 					}}
 					className={filled ? classes.fill : classes.btn}
 					onClick={onClick}

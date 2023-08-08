@@ -9,7 +9,7 @@
 	align-items: center;
 	width: 100vw;
 	/* Change width to auto if necessary */
-	animation: marquee 25s linear 0s infinite;
+	animation: marquee 30s linear 0s infinite;
 	margin: 30px 0;
 }
 .highlights:hover {
@@ -17,9 +17,9 @@
 }
 @keyframes marquee {
 	0% {
-		transform: translateX(140%);
+		transform: translateX(100%);
 	}
 	100% {
-		transform: translateX(-140%);
+		transform: translateX(-100%);
 	}
 }
