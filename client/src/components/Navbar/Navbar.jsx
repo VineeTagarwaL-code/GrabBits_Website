@@ -13,6 +13,7 @@ const Navbar = () => {
 		if (window.innerWidth < 800) {
 			window.scrollTo(0, 0);
 		}
+		changeOpen()
 	};
 
 	return (
