@@ -22,19 +22,25 @@ const Navbar = () => {
 				<nav className={classes.nav}>
 					<NavLink to="/">
 						{!open && (
-							<div className={classes.brand}>
+							<div className={`${classes.brand} ${classes.logoForSm} ` }>
 								<div className={classes.brand_logo}>
 									<img src={img} alt="logo" className={classes.logo} />
 								</div>
 								<span className={classes.brand__title}>GrabBit</span>
 							</div>
 						)}
+
+						<div className={`${classes.brand} ${classes.logoForLg} ` }>
+							<div className={classes.brand_logo}>
+								<img src={img} alt="logo" className={classes.logo} />
+							</div>
+							<span className={classes.brand__title}>GrabBit</span>
+						</div>
 					</NavLink>
 
 					<div
-						className={`${classes.nav__menu} ${
-							open ? classes.menu__open : classes.menu__close
-						}`}
+						className={`${classes.nav__menu} ${open ? classes.menu__open : classes.menu__close
+							}`}
 					>
 						<ul className={`${classes.nav__list} ${classes.grid}`}>
 							<NavLink to="/" onClick={handleLinkClick}>
