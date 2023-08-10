@@ -22,8 +22,9 @@ const Navbar = () => {
 
 	useEffect(() => {
 		const active = document.querySelector('.active')
-		document.title += active.textContent
-	  }, []);
+		document.title = "Grab Bits | " + active.getAttribute('href').slice(1,active.getAttribute('href').length)
+		
+	  });
 
 	return (
 		<>
