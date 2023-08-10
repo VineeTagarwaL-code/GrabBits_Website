@@ -53,6 +53,10 @@ a {
 	color: #7541c8;
 }
 
+.active {
+	color: #7541c8;
+}
+
 #nav__icon {
 	display: none;
 }
@@ -123,7 +127,7 @@ a {
 		display: block;
 		position: absolute;
 		bottom: 14rem;
-		right: 0.5rem;
+		right: 2rem;
 		font-size: 2rem;
 		background-color: white;
 		/* clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 60% 100%, 20% 80%, 0% 80%); */
