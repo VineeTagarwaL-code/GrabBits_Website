@@ -53,6 +53,10 @@ a {
 	color: #7541c8;
 }
 
+.active {
+	color: #7541c8;
+}
+
 #nav__icon {
 	display: none;
 }
@@ -122,9 +126,25 @@ a {
 	.menu__open #nav__close {
 		display: block;
 		position: absolute;
-		bottom: 1rem;
+		bottom: 14rem;
 		right: 2rem;
-		font-size: 2.5rem;
+		font-size: 2rem;
+		background-color: white;
+		/* clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 60% 100%, 20% 80%, 0% 80%); */
+	}
+
+	.menu__open #nav__close::after {
+		content: '';
+		position: absolute;
+		background-color: white;
+		height: 1rem;
+		bottom: -15%;
+		left: 25%;
+		transform: translateX(50%);
+		transform: rotate(-45deg);
+		width: 1rem;
+		z-index: -25;
+
 	}
 
 	.menu__open #nav__close:hover {
@@ -149,11 +169,30 @@ a {
 }
 
 @media screen and (min-width: 801px) {
-/* Sticky navbar */
-.header {
-	position: sticky;
-	top: 0;
-	width: 100%;
-	z-index: 100;
-  }
+
+	/* Sticky navbar */
+	.header {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.logoForLg {
+		display: flex;
+	}
+
+	.logoForSm {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 801px) {
+	.logoForLg {
+		display: none;
+	}
+
+	.logoForSm {
+		display: flex;
+	}
 }

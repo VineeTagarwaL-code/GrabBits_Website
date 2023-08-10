@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useSwiper } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
 import classes from './Card.module.css';
 import cardData from "./CardData";
@@ -10,6 +11,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Testimonials = () => {
+  const swiper = useSwiper();
   return (
     <div className={classes.testimon}>
 
@@ -18,17 +20,21 @@ const Testimonials = () => {
         centeredSlides={true}
         autoplay={{
           delay: 3000,
-          // disableOnInteraction: false,
+          disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-        navigation={false}
+        navigation={{
+          enabled: true,
+          nextEl : '.leftBtn',
+          prevEl : '.rightBtn',
+        }}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         {cardData.map((card, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} >
             <div className={classes.testimonSubsection}>
               <div className={classes.testisub}>
                 <div>
@@ -46,8 +52,8 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
 
-        <div className={classes.leftArrow}> <ArrowBackIcon/></div>
-        <div className={classes.rightArrow}> <ArrowForwardIcon/></div>
+        <div className={`${classes.leftArrow} leftBtn`}> <ArrowBackIcon /></div>
+        <div className={`${classes.rightArrow} rightBtn`}> <ArrowForwardIcon /></div>
       </Swiper>
     </div>
   );
