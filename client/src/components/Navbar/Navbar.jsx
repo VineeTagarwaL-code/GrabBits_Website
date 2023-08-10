@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import img from '../../assets/Logo.png';
 import classes from './Navbar.module.css';
@@ -14,6 +14,11 @@ const Navbar = () => {
 			window.scrollTo(0, 0);
 		}
 	};
+
+	useEffect(() => {
+		const active = document.querySelector('.active')
+		document.title += active.textContent
+	  }, []);
 
 	return (
 		<>
