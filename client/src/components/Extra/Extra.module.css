@@ -146,4 +146,8 @@
 		width: auto;
 		align-items: center;
 	}
+
+	.box1, .box2, .box3, .box4{
+		width: 10rem;
+	}
 }
