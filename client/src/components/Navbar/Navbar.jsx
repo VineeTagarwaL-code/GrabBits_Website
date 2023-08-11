@@ -21,10 +21,17 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		const active = document.querySelector('.active')
-		document.title = "Grab Bits | " + active.getAttribute('href').slice(1,active.getAttribute('href').length)
-		
-	  });
+  const active = document.querySelector('.active');
+  const pageTitle = active.getAttribute('href').slice(1);
+
+  // Capitalize the first letter of the page title
+  const capitalizedTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+
+  // Check if pageTitle is empty and replace with "Home"
+  const finalTitle = pageTitle ? capitalizedTitle : "Home";
+
+  document.title = "Grab Bits · " + finalTitle;
+});
 
 	return (
 		<>
