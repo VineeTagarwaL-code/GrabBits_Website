@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import img from '../../assets/Logo.png';
@@ -19,6 +19,12 @@ const Navbar = () => {
 		}
 		changeOpen()
 	};
+
+	useEffect(() => {
+		const active = document.querySelector('.active')
+		document.title = "Grab Bits | " + active.getAttribute('href').slice(1,active.getAttribute('href').length)
+		
+	  });
 
 	return (
 		<>
