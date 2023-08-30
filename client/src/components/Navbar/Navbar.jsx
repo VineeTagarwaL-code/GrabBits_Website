@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 import img from '../../assets/Logo.png';
 import classes from './Navbar.module.css';
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
-	const location = useLocation()
+	const location = useLocation();
 	console.log(location.pathname);
 
 	const changeOpen = () => {
@@ -17,21 +17,26 @@ const Navbar = () => {
 		if (window.innerWidth < 800) {
 			window.scrollTo(0, 0);
 		}
-		changeOpen()
+		changeOpen();
 	};
 
 	useEffect(() => {
-  const active = document.querySelector('.active');
-  const pageTitle = active.getAttribute('href').slice(1);
+		const active = document.querySelector('.active');
+		let finalTitle;
+		if (location.pathname !== '/hidden') {
+			const pageTitle = active.getAttribute('href').slice(1);
 
-  // Capitalize the first letter of the page title
-  const capitalizedTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+			// Capitalize the first letter of the page title
+			const capitalizedTitle =
+				pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
 
-  // Check if pageTitle is empty and replace with "Home"
-  const finalTitle = pageTitle ? capitalizedTitle : "Home";
-
-  document.title = "Grab Bits · " + finalTitle;
-});
+			// Check if pageTitle is empty and replace with "Home"
+			finalTitle = pageTitle ? capitalizedTitle : 'Home';
+		} else {
+			finalTitle = 'Hidden';
+		}
+		document.title = 'Grab Bits · ' + finalTitle;
+	});
 
 	return (
 		<>
@@ -39,7 +44,7 @@ const Navbar = () => {
 				<nav className={classes.nav}>
 					<NavLink to="/">
 						{!open && (
-							<div className={`${classes.brand} ${classes.logoForSm} ` }>
+							<div className={`${classes.brand} ${classes.logoForSm} `}>
 								<div className={classes.brand_logo}>
 									<img src={img} alt="logo" className={classes.logo} />
 								</div>
@@ -47,7 +52,7 @@ const Navbar = () => {
 							</div>
 						)}
 
-						<div className={`${classes.brand} ${classes.logoForLg} ` }>
+						<div className={`${classes.brand} ${classes.logoForLg} `}>
 							<div className={classes.brand_logo}>
 								<img src={img} alt="logo" className={classes.logo} />
 							</div>
@@ -56,41 +61,66 @@ const Navbar = () => {
 					</NavLink>
 
 					<div
-						className={`${classes.nav__menu} ${open ? classes.menu__open : classes.menu__close
-							}`}
+						className={`${classes.nav__menu} ${
+							open ? classes.menu__open : classes.menu__close
+						}`}
 					>
 						<ul className={`${classes.nav__list} ${classes.grid}`}>
 							<NavLink to="/" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/' && classes.active
+									}`}
+								>
 									<i className="uil uil-estate" id={classes.nav__icon}></i> Home
 								</li>
 							</NavLink>
 							<NavLink to="/opportunities" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/opportunities' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/opportunities' && classes.active
+									}`}
+								>
 									<i className="uil uil-bag" id={classes.nav__icon}></i>
 									Opportunities
 								</li>
 							</NavLink>
 							<NavLink to="/resources" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/resources' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/resources' && classes.active
+									}`}
+								>
 									<i className="uil uil-bag" id={classes.nav__icon}></i>
 									Resources
 								</li>
 							</NavLink>
 							<NavLink to="/podcasts" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/podcasts' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/podcasts' && classes.active
+									}`}
+								>
 									<i className="uil uil-megaphone" id={classes.nav__icon}></i>
 									Podcasts
 								</li>
 							</NavLink>
 							<NavLink to="/team" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/team' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/team' && classes.active
+									}`}
+								>
 									<i className="uil uil-users-alt" id={classes.nav__icon}></i>
 									About us
 								</li>
 							</NavLink>
 							<NavLink to="/contact" onClick={handleLinkClick}>
-								<li className={`${classes.nav__item} ${location.pathname === '/contact' && classes.active}`}>
+								<li
+									className={`${classes.nav__item} ${
+										location.pathname === '/contact' && classes.active
+									}`}
+								>
 									<i
 										className="uil uil-voicemail-rectangle"
 										id={classes.nav__icon}
