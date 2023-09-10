@@ -52,7 +52,7 @@ const Navbar = () => {
 							</div>
 						)}
 
-						<div className={`${classes.brand} ${classes.logoForLg} `}>
+                      <div className={`${classes.brand} ${classes.logoForLg} `}>
 							<div className={classes.brand_logo}>
 								<img src={img} alt="logo" className={classes.logo} />
 							</div>
