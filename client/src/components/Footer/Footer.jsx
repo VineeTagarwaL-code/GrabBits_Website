@@ -3,7 +3,7 @@ import classes from './Footer.module.css';
 import img from '../../assets/Logo.png';
 import { NavLink } from 'react-router-dom';
 import linkedin from '../../assets/Socials/linkedin-2.svg';
-import twitter from '../../assets/Socials/twitter.svg';
+import x from '../../assets/Socials/X-white.svg';
 import instagram from '../../assets/Socials/instagram.svg';
 import whatsapp from '../../assets/Socials/whatsapp.svg';
 import youtube from '../../assets/Socials/youtube.svg';
@@ -68,7 +68,7 @@ const Footer = () => {
 									title="Twitter (External Link)"
 									rel="noopener noreferrer"
 								>
-									<img className={classes.twi_link} src={twitter} alt='twitter'></img>
+									<img className={classes.twi_link} id="x" src={x} alt='twitter'></img>
 								</a>
 							</li>
 							<li className={classes.socia_link}>

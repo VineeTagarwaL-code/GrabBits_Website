@@ -123,9 +123,10 @@
 	padding: 2px;
 }
 .twi_link {
-	width: 30px;
-	height: 30px;
-	padding: 2px;
+	width: 25px;
+	height: 25px;
+	padding: 2px ;
+	padding-left: 4px;
 }
 
 .li_link {
